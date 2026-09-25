@@ -2,9 +2,11 @@
 
 微信小程序项目：北京六大景点（故宫、长城、天坛、颐和园、天安门、明十三陵）的英文导游词听写练习，含音频播放、逐句听写、评分与进度记录。
 
-- **仓库地址**：https://github.com/sunJia8-17/TourismEnglish.git
+- **仓库地址**：<https://github.com/sunJia8-17/TourismEnglish.git>
 - **当前主分支**：`main`
 - **AppID**：`wx9860c935cbfff90e`（开发工具导入时使用）
+
+> **关于敏感信息**：AppID 是公开标识符（分享链接中可见），不需要保密；真正必须保密的是小程序后台的 **AppSecret** 和服务器密钥，这些严禁写入代码、README 或提交到仓库。
 
 ## 项目结构速览
 
@@ -56,12 +58,12 @@ git checkout -b feature/ming-tombs-practice   # 新建功能分支
 git push -u origin feature/ming-tombs-practice  # 首次推送并关联远程
 ```
 
-| 分支类型 | 命名规范 | 示例 |
-|---|---|---|
-| 主分支 | `main` | 始终保持可运行 |
-| 功能开发 | `feature/xxx` | `feature/audio-speed` |
-| 修 Bug | `fix/xxx` | `fix/progress-percent` |
-| 紧急修复 | `hotfix/xxx` | `hotfix/crash-on-result` |
+| 分支类型  | 命名规范          | 示例                       |
+| ----- | ------------- | ------------------------ |
+| 主分支   | `main`        | 始终保持可运行                  |
+| 功能开发  | `feature/xxx` | `feature/audio-speed`    |
+| 修 Bug | `fix/xxx`     | `fix/progress-percent`   |
+| 紧急修复  | `hotfix/xxx`  | `hotfix/crash-on-result` |
 
 功能完成后在 GitHub 上发 Pull Request 合并回 `main`，或本地合并：
 
@@ -77,14 +79,14 @@ git branch -d feature/ming-tombs-practice   # 删除本地分支
 
 格式：`类型: 简短描述`（中文描述即可）
 
-| 类型 | 用途 |
-|---|---|
-| `feat` | 新功能（如新增景点分包、倍速播放） |
-| `fix` | 修复 Bug |
-| `style` | 样式调整（wxss、wxml 布局） |
-| `refactor` | 重构（不改功能的代码调整） |
-| `chore` | 配置、脚本、文档等杂项 |
-| `docs` | 文档变更 |
+| 类型         | 用途                 |
+| ---------- | ------------------ |
+| `feat`     | 新功能（如新增景点分包、倍速播放）  |
+| `fix`      | 修复 Bug             |
+| `style`    | 样式调整（wxss、wxml 布局） |
+| `refactor` | 重构（不改功能的代码调整）      |
+| `chore`    | 配置、脚本、文档等杂项        |
+| `docs`     | 文档变更               |
 
 示例：
 
