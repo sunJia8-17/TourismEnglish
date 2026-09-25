@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subpackages": [
+    {
+      "root": "guides/forbidden-city",
+      "pages": [
+        "pages/practice/practice",
+        "pages/result/result"
+      ]
+    },
+    {
+      "root": "guides/great-wall",
+      "pages": ["pages/practice/practice", "pages/result/result"]
+    },
+    {
+      "root": "guides/temple-of-heaven",
+      "pages": ["pages/practice/practice", "pages/result/result"]
+    },
+    {
+      "root": "guides/summer-palace",
+      "pages": ["pages/practice/practice", "pages/result/result"]
+    },
+    {
+      "root": "guides/tiananmen",
+      "pages": ["pages/practice/practice", "pages/result/result"]
+    },
+    {
+      "root": "guides/ming-tombs",
+      "pages": ["pages/practice/practice", "pages/result/result"]
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "北京英文导游词",
+    "navigationBarBackgroundColor": "#F7F7F4",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F7F7F4",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

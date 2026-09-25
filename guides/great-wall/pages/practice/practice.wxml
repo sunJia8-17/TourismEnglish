@@ -1,0 +1,64 @@
+<view class="page">
+  <view class="nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-inner" style="height: {{navBarHeight}}px;">
+      <view class="back" bindtap="onBack">
+        <view class="back-arrow"></view>
+      </view>
+      <view class="nav-copy">
+        <view class="nav-en en">{{enTitle}}</view>
+        <view class="nav-cn">{{title}} · 第 {{displayIndex}} 句 / 共 {{total}} 句</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="wave">
+    <view class="wave-line {{playing ? 'on' : ''}}"></view>
+  </view>
+
+  <view class="label">LISTEN & TYPE</view>
+  <view class="sentence en">{{sentence}}</view>
+
+  <textarea
+    class="input"
+    maxlength="240"
+    auto-height
+    value="{{draft}}"
+    placeholder="输入你听到的英文..."
+    placeholder-class="ph"
+    bindinput="onInput"
+  />
+
+  <view class="player">
+    <view class="side-line"></view>
+    <view class="play" bindtap="onTogglePlay">
+      <view class="{{playing ? 'pause' : 'tri'}}"></view>
+    </view>
+    <view class="side-line"></view>
+  </view>
+  <view class="now en">{{statusText}}</view>
+
+  <view class="chips">
+    <view class="chip" bindtap="onToggleAccent">{{accentLabel}}</view>
+    <view
+      class="chip {{rate === 0.5 ? 'on' : ''}}"
+      bindtap="onRate"
+      data-rate="0.5"
+    >0.5×</view>
+    <view
+      class="chip {{rate === 1 ? 'on' : ''}}"
+      bindtap="onRate"
+      data-rate="1"
+    >1×</view>
+    <view
+      class="chip {{rate === 1.5 ? 'on' : ''}}"
+      bindtap="onRate"
+      data-rate="1.5"
+    >1.5×</view>
+  </view>
+
+  <view class="actions">
+    <view class="act ghost" bindtap="onToggleAccent">本地百度英文语音</view>
+    <view class="act dark" bindtap="onReplay">再听一遍</view>
+    <view class="act light" bindtap="onNext">下一句 →</view>
+  </view>
+</view>

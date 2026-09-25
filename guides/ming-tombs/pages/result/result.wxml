@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="status-safe" style="height: {{statusBarHeight}}px;"></view>
+  <view class="top">
+    <view class="exit" bindtap="onExit">退出</view>
+  </view>
+
+  <view class="check">
+    <view class="tick"></view>
+  </view>
+  <view class="done">本句完成！</view>
+  <view class="streak">你已连续完成 {{streak}} 句听写</view>
+
+  <view class="card">
+    <view class="card-label">听写结果</view>
+    <view class="card-text en">{{sentence}}</view>
+    <view class="card-meta">准确率 {{accuracy}}%  ·  发音：{{accentText}}  ·  速度：{{rate}}×</view>
+  </view>
+
+  <view class="ask">接下来做什么？</view>
+  <view class="next-row">
+    <view class="btn white" bindtap="onReplay">
+      <view class="btn-title">再听一遍</view>
+      <view class="btn-sub muted">巩固语音细节</view>
+    </view>
+    <view class="btn lime" bindtap="onNext" wx:if="{{!finished}}">
+      <view class="btn-title">下一句</view>
+      <view class="btn-sub">继续第 {{nextIndex}} 句  →</view>
+    </view>
+    <view class="btn lime" bindtap="onExit" wx:else>
+      <view class="btn-title">返回首页</view>
+      <view class="btn-sub">本篇已全部完成</view>
+    </view>
+  </view>
+  <view class="hint">{{hint}}</view>
+</view>

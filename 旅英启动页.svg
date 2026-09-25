@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF1E"/><stop offset="1" stop-color="#AFFF00"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1080" height="1920" fill="#121514"/>
+  <circle cx="950" cy="202" r="250" fill="#C9FF00" opacity=".12" filter="url(#glow)"/>
+  <circle cx="108" cy="1700" r="260" fill="#C9FF00" opacity=".1" filter="url(#glow)"/>
+  <path d="M-50 1514 C260 1650 401 1424 514 1110 C627 795 754 553 1135 660" fill="none" stroke="#C9FF00" stroke-width="4" stroke-dasharray="11 19" opacity=".8"/>
+  <path d="M-10 1543 C260 1674 426 1443 536 1132 C650 809 778 585 1120 686" fill="none" stroke="#4B5550" stroke-width="2" stroke-dasharray="7 14"/>
+  <text x="86" y="115" fill="#F6F8F5" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="3">LÜYING DICTATION</text>
+  <text x="86" y="150" fill="#AEB6B1" font-family="Microsoft YaHei, sans-serif" font-size="18">旅游英语 · 逐句听写</text>
+  <g transform="translate(260 540)">
+    <rect width="560" height="560" rx="130" fill="#1B211E" stroke="#47534D" stroke-width="2"/>
+    <circle cx="280" cy="280" r="215" fill="none" stroke="#3B4540" stroke-width="2" stroke-dasharray="8 15"/>
+    <path d="M78 385 C153 424 203 355 245 240 C283 137 343 88 461 139" fill="none" stroke="url(#g)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M184 390 L280 105 L382 390 M219 287 H347" fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(448 113) rotate(25)"><path d="M0 42 L77 16 L118 24 L85 40 L113 58 L104 70 L72 54 L44 89 L27 84 L41 48Z" fill="#F4F7F3"/></g>
+  </g>
+  <text x="540" y="1254" text-anchor="middle" fill="#F7F8F6" font-family="Microsoft YaHei, sans-serif" font-size="76" font-weight="700">旅英听写</text>
+  <text x="540" y="1320" text-anchor="middle" fill="#C9FF00" font-family="Arial, sans-serif" font-size="26" letter-spacing="5">LISTEN · WRITE · TRAVEL</text>
+  <text x="540" y="1402" text-anchor="middle" fill="#AEB6B1" font-family="Microsoft YaHei, sans-serif" font-size="27">听一句，写一句，讲好中国故事</text>
+  <rect x="154" y="1630" width="772" height="4" rx="2" fill="#2D3631"/><rect x="154" y="1630" width="266" height="4" rx="2" fill="#C9FF00"/>
+  <text x="540" y="1685" text-anchor="middle" fill="#707A74" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">MADE FOR TOUR GUIDES</text>
+  <text x="540" y="1815" text-anchor="middle" fill="#68726C" font-family="Microsoft YaHei, sans-serif" font-size="18">© 2026 旅英听写</text>
+</svg>

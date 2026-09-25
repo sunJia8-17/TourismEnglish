@@ -1,0 +1,15 @@
+page {
+  --lime: #c9ff00;
+  --ink: #151817;
+  --paper: #f7f7f4;
+  --muted: #7e8581;
+  --line: #c9c9c5;
+  --night: #121514;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.en {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
