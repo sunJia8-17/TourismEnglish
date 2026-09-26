@@ -6,7 +6,7 @@ Page({
     statusBarHeight: 44,
     sentence: "",
     accuracy: 0,
-    accentText: "英音",
+    accentText: "美式语音",
     rate: 1,
     streak: 0,
     nextIndex: 13,
@@ -15,9 +15,14 @@ Page({
   },
 
   onLoad() {
-    const sys = wx.getSystemInfoSync();
+    const sys = wx.getWindowInfo();
     const result = wx.getStorageSync("bj_last_result") || {};
     const script = getScript(result.id);
+    if (!script || !script.sentences || !script.sentences.length) {
+      // Opened without a valid result (e.g. shared link) - go home instead of crashing.
+      wx.reLaunch({ url: "/pages/index/index" });
+      return;
+    }
     const nextIndex = (result.index || 0) + 2;
     const finished = nextIndex > script.sentences.length;
     this.result = result;
@@ -27,7 +32,7 @@ Page({
       statusBarHeight: (sys.statusBarHeight || 20) + 8,
       sentence: result.sentence || "",
       accuracy: result.accuracy || 0,
-      accentText: "百度语音",
+      accentText: "美式语音",
       rate: result.rate || 1,
       streak: result.streak || 0,
       nextIndex,

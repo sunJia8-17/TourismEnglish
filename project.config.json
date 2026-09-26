@@ -1,7 +1,19 @@
 {
   "description": "北京英文导游词听写训练",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      { "type": "folder", "value": "scripts" },
+      { "type": "folder", "value": "audio-build" },
+      { "type": "folder", "value": ".workbuddy" },
+      { "type": "folder", "value": ".git" },
+      { "type": "file", "value": "README.md" },
+      { "type": "file", "value": "旅英启动页.svg" },
+      { "type": "file", "value": "旅英头像.png" },
+      { "type": "file", "value": "旅英头像.svg" },
+      { "type": "file", "value": "beijing-dictation-ui-prototype.svg" },
+      { "type": "file", "value": "客户说小程序UI界面可以做的辣么好看_3_得遇文化（DOYUUE）_来自小红书网页版.jpg" },
+      { "type": "file", "value": "客户说小程序UI界面可以做的辣么好看_4_得遇文化（DOYUUE）_来自小红书网页版.jpg" }
+    ],
     "include": []
   },
   "setting": {

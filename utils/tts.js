@@ -22,6 +22,10 @@ function createPlayer(onUpdate) {
   let request = null;
   let sequence = 0;
   let isSeeking = false;
+  // Guards against seek+play running twice for one request (the onCanplay
+  // event and the fallback timer can both fire), which would layer two
+  // overlapping copies of the clip.
+  let started = false;
 
   function clipDuration() {
     return request ? Math.max(0, request.end - request.start) : 0;
@@ -42,7 +46,8 @@ function createPlayer(onUpdate) {
   }
 
   function begin(currentSequence) {
-    if (!request || currentSequence !== sequence) return;
+    if (!request || currentSequence !== sequence || started) return;
+    started = true;
     isSeeking = true;
     try {
       audio.seek(request.start);
@@ -77,6 +82,7 @@ function createPlayer(onUpdate) {
       request = nextRequest;
       rate = nextRate || 1;
       sequence += 1;
+      started = false;
       const currentSequence = sequence;
       try {
         audio.stop();
@@ -98,8 +104,14 @@ function createPlayer(onUpdate) {
     },
     destroy() {
       sequence += 1;
+      started = true;
+      try {
+        audio.pause();
+      } catch (e) {}
       try {
         audio.stop();
+      } catch (e) {}
+      try {
         audio.destroy();
       } catch (e) {}
     }

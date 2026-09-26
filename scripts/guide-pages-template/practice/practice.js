@@ -16,15 +16,15 @@ Page({
     displayIndex: 1,
     total: 0,
     draft: "",
-    accent: "baidu",
-    accentLabel: "百度语音",
+    accent: "tencent",
+    accentLabel: "美式语音",
     rate: 1,
     playing: false,
     statusText: "READY · 00:00 / 00:00"
   },
 
   onLoad(query) {
-    const sys = wx.getSystemInfoSync();
+    const sys = wx.getWindowInfo();
     const menu = wx.getMenuButtonBoundingClientRect();
     const id = query.id || "forbidden-city";
     const script = getScript(id);
@@ -89,7 +89,9 @@ Page({
     const guide = AUDIO_MANIFEST[this.data.id];
     const timing = guide && guide.timings[this.data.index];
     if (!guide || !timing) return null;
-    return { src: guide.file, start: timing[0], end: timing[1] };
+    // Multi-part audio: timing[2] tells which file the sentence lives in.
+    const src = guide.files ? guide.files[timing[2] || 0] : guide.file;
+    return { src, start: timing[0], end: timing[1] };
   },
 
   playCurrent() {
@@ -119,7 +121,7 @@ Page({
   },
 
   onToggleAccent() {
-    wx.showToast({ title: "本地 MP3 已固定为百度英文语音", icon: "none" });
+    wx.showToast({ title: "本地音频已固定为腾讯云英文语音（男声）", icon: "none" });
   },
 
   onBack() {

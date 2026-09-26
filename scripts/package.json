@@ -1,0 +1,9 @@
+{
+  "name": "tourism-english-build-scripts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build-time only scripts (audio generation, packaging). Not shipped in the mini-program.",
+  "dependencies": {
+    "tencentcloud-sdk-nodejs-tts": "^4.0.1000"
+  }
+}
